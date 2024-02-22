@@ -1,4 +1,27 @@
 @media (min-width: 1075px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .main-page__menu-tabs {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-page__menu-tabs:first-child {
+    margin-left: 0;
+  }
+
+  .main-page__tablink {
+    margin-left: 64px;
+  }
+
+  .main-page__button-container {
+    margin: 0;
+  }
+
   .main-page__content-block {
     display: flex;
   }
@@ -37,7 +60,7 @@
 
   .main-page__text-block {
     max-height: 835px;
-    overflow: scroll;
+    overflow-y: auto;
     box-sizing: border-box;
     width: 49%;
     margin: 0;
@@ -46,5 +69,25 @@
   .experience,
   .skills {
     display: none;
+  }
+
+  .main-page__footer-main-block {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .main-page__contacts-block {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-page__social-networks,
+  .main-page__phone {
+    margin: 0;
+  }
+
+  .main-page__email {
+    margin-right: 24px;
   }
 }

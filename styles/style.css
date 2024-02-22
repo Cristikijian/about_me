@@ -222,6 +222,7 @@ table {
 
 .main-page__button:hover {
   background-color: #293133;
+  cursor: pointer;
 }
 
 .main-page__menu-tabs {
@@ -241,6 +242,33 @@ table {
 
 .main-page__tablink:active {
   font-weight: 700;
+}
+
+.main-page__tablink {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-page__tablink::after {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #FFDD00;
+}
+
+.main-page__tablink::after {
+  width: 0;
+  transition: 0.3s;
+}
+
+.main-page__tablink:hover:after {
+  width: 100%;
+
 }
 
 .main-page__background-image.star-image,
@@ -286,12 +314,21 @@ table {
   color: #FFFFFF;
 }
 
+.main-page__footer-main-block {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-page__email {
   color: #FFFFFF;
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
   text-align: left;
+}
+
+.main-page__email:hover {
+  color: #FFDD00;
 }
 
 .main-page__phone {
