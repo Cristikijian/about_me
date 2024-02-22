@@ -2,9 +2,11 @@
   "name": "oggetto_test",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack-cli build",
+    "start": "webpack-cli watch"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,8 @@
     "jquery": "^3.7.1"
   },
   "devDependencies": {
-    "webpack": "^5.90.3"
+    "webpack": "^5.90.3",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.2"
   }
 }

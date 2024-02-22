@@ -5,6 +5,10 @@
     flex-direction: row;
   }
 
+  .tab {
+    padding: 24px 64px 40px 64px;
+  }
+
   .main-page__menu-tabs {
     display: flex;
     justify-content: center;
@@ -58,10 +62,10 @@
     top: 0px;
   }
 
-  .main-page__text-block {
+  .content-wrapper {
     max-height: 835px;
-    overflow-y: auto;
     box-sizing: border-box;
+    overflow-y: auto;
     width: 49%;
     margin: 0;
   }
@@ -69,6 +73,7 @@
   .experience,
   .skills {
     display: none;
+    overflow-y: auto;
   }
 
   .main-page__footer-main-block {
