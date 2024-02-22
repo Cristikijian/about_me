@@ -1,0 +1,50 @@
+@media (min-width: 1075px) {
+  .main-page__content-block {
+    display: flex;
+  }
+
+  .main-page__background {
+    width: 50%;
+    position: relative;
+    display: flex;
+  }
+
+  .main-page__background-image.mobile-background {
+    display: none;
+  }
+
+  .main-page__background-image.star-image,
+  .main-page__background-image.cube-image,
+  .main-page__background-image.main-image {
+    display: block;
+  }
+
+  .main-page__background-image.main-image {
+    align-self: end;
+  }
+
+  .main-page__background-image.cube-image {
+    position: absolute;
+    right: 0px;
+    top: 50px;
+  }
+
+  .main-page__background-image.star-image {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .main-page__text-block {
+    max-height: 835px;
+    overflow: scroll;
+    box-sizing: border-box;
+    width: 49%;
+    margin: 0;
+  }
+
+  .experience,
+  .skills {
+    display: none;
+  }
+}

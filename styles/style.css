@@ -1,0 +1,382 @@
+/** CSS RESET **/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/** CSS RESET **/
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat-Regular.ttf') format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.main-page {
+  font-family: Montserrat;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.title-text {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 36px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.subtitle-text {
+  font-family: Montserrat;
+  color: black;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left;
+}
+
+.grey-background {
+  background-color: #F6F6F6;
+}
+
+.header {
+  padding: 40px 20px;
+}
+
+.header__title-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__subtitle-text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #6F6F6F;
+}
+
+.header__main-photo,
+.header__name-block {
+  display: inline;
+}
+
+.header__main-photo {
+  margin-right: 16px;
+}
+
+.header__main-photo-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.main-page__button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.main-page__button {
+  padding: 16px, 24px, 16px, 24px;
+  border-radius: 64px;
+  background-color: black;
+  width: 335px;
+  height: 64px;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 31px;
+
+}
+
+.main-page__button:hover {
+  background-color: #293133;
+}
+
+.main-page__menu-tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.main-page__tablink {
+  background-color: #FFFFFF;
+  border: none;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+}
+
+.main-page__tablink:active {
+  font-weight: 700;
+}
+
+.main-page__background-image.star-image,
+.main-page__background-image.cube-image,
+.main-page__background-image.main-image {
+  display: none;
+}
+
+.main-page__background {
+  width: 100%;
+  background: linear-gradient(0deg, #ECB300 0%, #FFDD00 20%, #FCED50 90%);
+}
+
+.main-page__text-block {
+  padding: 32px 20px 40px 20px;
+  position: relative;
+  z-index: 1;
+  background-color: #FFFFFF;
+  margin: -20px auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.main-page__paragraph {
+  padding-top: 16px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+
+.main-page__paragraph:first-child {
+  padding-top: 0;
+}
+
+.main-page__footer {
+  background-color: black;
+  padding: 48px 20px;
+}
+
+.main-page__contacts-block {
+  color: #FFFFFF;
+}
+
+.main-page__email {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  text-align: left;
+}
+
+.main-page__phone {
+  margin-top: 24px;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 31px;
+  text-align: left;
+}
+
+.main-page__social-networks {
+  margin-top: 40px;
+  align-items: center;
+}
+
+.main-page__social-link {
+  margin-right: 36px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.main-page__social-link:hover svg {
+  fill: #FFDD00;
+}
+
+.main-page__social-link-delimiter {
+  position: absolute;
+  top: 15px;
+  right: -22px;
+  width: 1px;
+  height: 12px;
+  background-color: #6F6F6F;
+  opacity: 0.5;
+}
+
+.main-page__copywrite {
+  margin-top: 40px;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.main-page__copywrite-name {
+  font-weight: 700;
+}
+
+.experience,
+.skills {
+  margin-top: 20px;
+}
+
+.experience .title-text,
+.skills .title-text {
+  padding-left: 20px;
+  margin-bottom: 24px;
+}
+
+.experience__item,
+.skills__item {
+  padding: 24px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.experience__period {
+  margin-top: 20px;
+  width: 182px;
+  padding: 12px;
+  background-color: #FFDD00;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.skills__level {
+  max-width: 50%;
+  padding: 12px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 18px;
+  background: linear-gradient(90deg, #FFDD00 70%, #E6E6E6 30%);
+}
