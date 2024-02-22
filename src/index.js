@@ -7,6 +7,6 @@ $.when( $.ready ).then(function() {
     tabs.removeClass("active");
     $(this).addClass("active");
     $(".tab").hide();
-    $(`[data-id="${this.id}"]`).fadeIn()
+    $(`[data-id="${this.id}"]`).show()
   });
 });

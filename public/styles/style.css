@@ -232,6 +232,7 @@ table {
 .main-page__button {
   padding: 16px 24px 16px 24px;
   border-radius: 64px;
+  border-style: none;
   background-color: black;
   width: 335px;
   height: 64px;
@@ -386,11 +387,6 @@ table {
 
 .main-page__copywrite-name {
   font-weight: 700;
-}
-
-.experience,
-.skills {
-  margin-top: 20px;
 }
 
 .experience .title-text,
