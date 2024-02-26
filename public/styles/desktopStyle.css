@@ -10,6 +10,20 @@
     margin: 0;
   }
 
+  .title-text {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+  }
+
+  .header__subtitle-text {
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 36px;
+
+  }
+
   .main-page__menu-tabs {
     display: flex;
     justify-content: center;
@@ -32,6 +46,7 @@
   }
 
   .main-page__background {
+    min-height: 834px;
     width: 50%;
     position: relative;
     display: flex;

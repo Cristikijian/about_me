@@ -124,7 +124,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: '';
+  content: "";
   content: none;
 }
 
@@ -136,59 +136,85 @@ table {
 /** CSS RESET **/
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.ttf') format("truetype");
+  font-family: "Montserrat";
+  src:
+    url("../fonts/Montserrat-Regular.ttf") format("truetype"),
+    url("../fonts/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.woff2") format("woff2");
   font-style: normal;
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Montserrat-Bold";
+  src:
+    url("../fonts/Montserrat-Bold.ttf") format("truetype"),
+    url("../fonts/Montserrat-Bold.woff") format("woff"),
+}
+
 .main-page {
   font-family: Montserrat;
+  color: black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
   letter-spacing: 0px;
   text-align: left;
+}
+
+.title-text,
+.subtitle-text,
+.skills__level,
+.experience__period {
+  font-family: Montserrat-Bold;
 }
 
 .title-text {
   font-size: 24px;
   font-weight: 700;
   line-height: 36px;
-  letter-spacing: 0px;
-  text-align: left;
 }
 
 .subtitle-text {
-  font-family: Montserrat;
-  color: black;
-  font-size: 18px;
   font-weight: 700;
-  line-height: 27px;
-  text-align: left;
 }
 
 .paragraph {
   padding-top: 16px;
-  font-family: Montserrat;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  text-align: left;
 }
 
 .paragraph:first-child {
   padding-top: 0;
 }
 
-
 .grey-background {
   background-color: #F6F6F6;
 }
 
-.show-button {
+.content-wrapper {
+  position: relative;
+  z-index: 1;
+  background-color: #FFFFFF;
+  margin: -20px auto;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.show-button,
+.hide-button {
+  display: block;
   margin-top: 40px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+
+.hiding-wrapper,
+.hide-button {
+  display: none;
 }
 
 .header {
@@ -203,7 +229,6 @@ table {
 
 .header__subtitle-text {
   font-size: 16px;
-  font-weight: 400;
   line-height: 24px;
   color: #6F6F6F;
 }
@@ -257,14 +282,13 @@ table {
 .main-page__tablink {
   background-color: #FFFFFF;
   border: none;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
   text-align: center;
 }
 
+.main-page__tablink:hover,
 .main-page__tablink.active {
   font-weight: 700;
+  font-family: Montserrat-Bold;
 }
 
 .main-page__tablink {
@@ -275,7 +299,7 @@ table {
 
 .main-page__tablink::after {
   position: absolute;
-  content: '';
+  content: "";
   left: 0;
   bottom: 0;
   display: block;
@@ -307,12 +331,6 @@ table {
 
 .main-page__text-block {
   padding: 32px 20px 40px 20px;
-  position: relative;
-  z-index: 1;
-  background-color: #FFFFFF;
-  margin: -20px auto;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 .main-page__footer {
@@ -334,7 +352,6 @@ table {
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
-  text-align: left;
 }
 
 .main-page__email:hover {
@@ -344,9 +361,7 @@ table {
 .main-page__phone {
   margin-top: 24px;
   font-size: 24px;
-  font-weight: 400;
   line-height: 31px;
-  text-align: left;
 }
 
 .main-page__social-networks {
@@ -379,10 +394,7 @@ table {
   margin-top: 40px;
   color: #FFFFFF;
   font-size: 12px;
-  font-weight: 400;
   line-height: 18px;
-  letter-spacing: 0px;
-  text-align: left;
 }
 
 .main-page__copywrite-name {
@@ -391,7 +403,6 @@ table {
 
 .experience .title-text,
 .skills .title-text {
-  padding-left: 20px;
   margin-bottom: 24px;
 }
 
@@ -399,13 +410,12 @@ table {
 .skills__item {
   padding: 24px;
   border-radius: 12px;
-  text-align: center;
 }
 
 .experience__period {
+  display: inline-block;
   margin-top: 20px;
-  width: 182px;
-  padding: 12px;
+  padding: 6px 12px;
   background-color: #FFDD00;
   border-radius: 100px;
   font-size: 12px;
@@ -414,11 +424,23 @@ table {
 }
 
 .skills__level {
-  max-width: 50%;
-  padding: 12px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 6px 18px 6px 12px;
   border-radius: 100px;
   font-size: 12px;
   font-weight: 700;
   line-height: 18px;
+}
+
+.level-30 {
+  background: linear-gradient(90deg, #FFDD00 30%, #E6E6E6 70%);
+}
+
+.level-50 {
+  background: linear-gradient(90deg, #FFDD00 50%, #E6E6E6 50%);
+}
+
+.level-70 {
   background: linear-gradient(90deg, #FFDD00 70%, #E6E6E6 30%);
 }
