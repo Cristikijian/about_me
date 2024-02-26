@@ -400,6 +400,11 @@ table {
   font-weight: 700;
 }
 
+.experience,
+.skills {
+  display: none;
+}
+
 .experience .title-text,
 .skills .title-text {
   margin-bottom: 24px;
