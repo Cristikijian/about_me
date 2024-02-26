@@ -7,7 +7,6 @@
   <title>Обо мне</title>
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/desktopStyle.css">
-  <script src="dist/main.js"></script>
 </head>
 
 <body class="main-page">
@@ -25,10 +24,10 @@
       <button class="main-page__button">Мои контакты</button>
     </div>
   </header>
-  <div class="main-page__menu-tabs">
-    <a class="main-page__tablink active" id="about_me">Обо мне</a>
-    <a class="main-page__tablink" id="experience">Опыт работы</a>
-    <a class="main-page__tablink" id="skills">Навыки</a>
+  <div class="tabs">
+    <a class="tablink active" id="about_me">Обо мне</a>
+    <a class="tablink" id="experience">Опыт работы</a>
+    <a class="tablink" id="skills">Навыки</a>
   </div>
   <div class="main-page__content-block">
     <div class="main-page__background">
@@ -115,22 +114,22 @@
           </p>
           <div class="experience__period">МАРТ 2012 Г &mdash; МАЙ 2013 Г</div>
         </div>
-        <div class="experience__item grey-background">
-          <h3 class="subtitle-text">OOO "План-б"</h3>
-          <p class="paragraph">
-            Поддержка и развитие существующих проектов.
-            Постановка задач специалистам и контроль процесса их выполнения. Коммуникация с клиентами, отчетность.
-            Разработка под моим контролем как менеджера нескольких новых веб-сайтов с нуля (сайт ресторана, сайт
-            торговой
-            компании и так далее).
-            Перевод нескольких сайтов на другие технологии и платформы. (Например, с самописной CRM на Phyton на
-            1С-Битрикс
-            с PHP без простоев и потери работоспособности.)
-          </p>
-          <div class="experience__period">АВГУСТ 2013 Г &mdash; МАЙ 2014 Г</div>
-        </div>
         <a class="show-button">Показать полностью</a>
         <div class="hiding-wrapper">
+          <div class="experience__item grey-background">
+            <h3 class="subtitle-text">OOO "План-б"</h3>
+            <p class="paragraph">
+              Поддержка и развитие существующих проектов.
+              Постановка задач специалистам и контроль процесса их выполнения. Коммуникация с клиентами, отчетность.
+              Разработка под моим контролем как менеджера нескольких новых веб-сайтов с нуля (сайт ресторана, сайт
+              торговой
+              компании и так далее).
+              Перевод нескольких сайтов на другие технологии и платформы. (Например, с самописной CRM на Phyton на
+              1С-Битрикс
+              с PHP без простоев и потери работоспособности.)
+            </p>
+            <div class="experience__period">АВГУСТ 2013 Г &mdash; МАЙ 2014 Г</div>
+          </div>
           <div class="experience__item">
             <h3 class="subtitle-text">Фриланс, контент-менеджер, администратор сайтов</h3>
             <p class="paragraph">
@@ -179,7 +178,7 @@
             Хорошо адаптирую веб-сайты под различные устройства и экраны для оптимального отображения.
           </p>
         </div>
-        <div class="skills__item">
+        <div class="skills__item grey-background">
           <div class="skills__level level-50">
             JQUERY
           </div>
@@ -187,19 +186,19 @@
             Использовала меньше, чем React, но изучала и могу при необходимости углубиться.
           </p>
         </div>
-        <div class="skills__item">
-          <div class="skills__level level-70">
-            REACT
-          </div>
-          <p class="paragraph">
-            Есть опыт работы как с классовым, так и с функциональным React. Использую хуки, HOC, популярные паттерны.
-            Есть
-            опыт разработки небольших приложений с нуля.
-          </p>
-        </div>
         <a class="show-button">Показать полностью</a>
         <div class="hiding-wrapper">
           <div class="skills__item">
+            <div class="skills__level level-70">
+              REACT
+            </div>
+            <p class="paragraph">
+              Есть опыт работы как с классовым, так и с функциональным React. Использую хуки, HOC, популярные паттерны.
+              Есть
+              опыт разработки небольших приложений с нуля.
+            </p>
+          </div>
+          <div class="skills__item grey-background">
             <div class="skills__level level-70">
               REDUX
             </div>
@@ -223,7 +222,6 @@
       </div>
     </div>
   </div>
-
   <div class="main-page__footer">
     <div class="main-page__footer-main-block">
       <div class="main-page__contacts-block">
@@ -250,7 +248,6 @@
       2022-2024. Веб-разработчик
     </div>
   </div>
-
 </body>
 
 </html>

@@ -1,28 +1,33 @@
 import $ from "jquery";
 
 $.when( $.ready ).then(function() {
-  const tabs = $(".main-page__tablink");
-  tabs.on("click", function(eventObject) {
+  $(".tablink").on("click", function(eventObject) {
     eventObject.preventDefault();
-    tabs.removeClass("active");
-    $(this).addClass("active");
-    $(".tab").fadeOut();
-    $(`[data-id="${this.id}"]`).fadeIn()
+    const currentButton = $(eventObject.target);
+
+    const prevButton = currentButton.siblings('.active');
+    prevButton.removeClass('active');
+    currentButton.addClass('active');
+
+    $(`.tab[data-id="${prevButton.attr('id')}"]`).fadeOut(() => {
+      console.log('fadeout end');
+      $(`.tab[data-id="${currentButton.attr('id')}"]`).fadeIn()
+    });   
   });
 
   $(".show-button").on("click", function(eventObject) {
     eventObject.preventDefault();
     const button = $(eventObject.target);
     button.siblings('.hiding-wrapper').fadeIn();
-    button.siblings('.hide-button').show();
-    button.hide();
+    button.siblings('.hide-button').fadeIn();
+    button.fadeOut();
   });
 
   $(".hide-button").on("click", function(eventObject) {
     eventObject.preventDefault();
     const button = $(eventObject.target);
     button.siblings('.hiding-wrapper').fadeOut();
-    button.siblings('.show-button').show();
-    button.hide();
+    button.siblings('.show-button').fadeIn();
+    button.fadeOut();
   });
 });

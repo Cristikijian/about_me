@@ -200,6 +200,51 @@ table {
   border-top-right-radius: 20px;
 }
 
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 20px;
+}
+
+.tablink {
+  background-color: #FFFFFF;
+  border: none;
+  text-align: center;
+}
+
+.tablink:hover,
+.tablink.active {
+  font-weight: 700;
+  font-family: Montserrat-Bold;
+}
+
+.tablink {
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tablink::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: #FFDD00;
+}
+
+.tablink::after {
+  width: 0;
+  transition: 0.3s;
+}
+
+.tablink:hover:after {
+  width: 100%;
+
+}
+
 .show-button,
 .hide-button {
   display: block;
@@ -273,51 +318,6 @@ table {
   cursor: pointer;
 }
 
-.main-page__menu-tabs {
-  display: flex;
-  justify-content: space-between;
-  padding: 40px 20px;
-}
-
-.main-page__tablink {
-  background-color: #FFFFFF;
-  border: none;
-  text-align: center;
-}
-
-.main-page__tablink:hover,
-.main-page__tablink.active {
-  font-weight: 700;
-  font-family: Montserrat-Bold;
-}
-
-.main-page__tablink {
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.main-page__tablink::after {
-  position: absolute;
-  content: "";
-  left: 0;
-  bottom: 0;
-  display: block;
-  width: 100%;
-  height: 4px;
-  background: #FFDD00;
-}
-
-.main-page__tablink::after {
-  width: 0;
-  transition: 0.3s;
-}
-
-.main-page__tablink:hover:after {
-  width: 100%;
-
-}
-
 .main-page__background-image.star-image,
 .main-page__background-image.cube-image,
 .main-page__background-image.main-image {
@@ -326,7 +326,6 @@ table {
 
 .main-page__background {
   width: 100%;
-  background: linear-gradient(0deg, #ECB300 0%, #FFDD00 20%, #FCED50 90%);
 }
 
 .main-page__text-block {
@@ -443,4 +442,69 @@ table {
 
 .level-70 {
   background: linear-gradient(90deg, #FFDD00 70%, #E6E6E6 30%);
+}
+
+.main-page__background {
+  background: linear-gradient(45deg, #ECB300, #ffffff, #FFDD00, #FCED50);
+  background-size: 300% 300%;
+  -webkit-animation: AnimationName 5s ease infinite;
+  -moz-animation: AnimationName 5s ease infinite;
+  -o-animation: AnimationName 5s ease infinite;
+  animation: AnimationName 5s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@-o-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
 }
