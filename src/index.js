@@ -10,7 +10,6 @@ $.when( $.ready ).then(function() {
     currentButton.addClass('active');
 
     $(`.tab[data-id="${prevButton.attr('id')}"]`).fadeOut(() => {
-      console.log('fadeout end');
       $(`.tab[data-id="${currentButton.attr('id')}"]`).fadeIn()
     });   
   });
