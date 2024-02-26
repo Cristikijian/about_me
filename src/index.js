@@ -17,7 +17,7 @@ $.when( $.ready ).then(function() {
   $(".show-button").on("click", function(eventObject) {
     eventObject.preventDefault();
     const button = $(eventObject.target);
-    button.siblings('.hiding-wrapper').slideIn();
+    button.siblings('.hiding-wrapper').fadeIn();
     button.siblings('.hide-button').fadeIn();
     button.fadeOut();
   });
@@ -25,7 +25,7 @@ $.when( $.ready ).then(function() {
   $(".hide-button").on("click", function(eventObject) {
     eventObject.preventDefault();
     const button = $(eventObject.target);
-    button.siblings('.hiding-wrapper').slideOut();
+    button.siblings('.hiding-wrapper').fadeOut();
     button.siblings('.show-button').fadeIn();
     button.fadeOut();
   });
