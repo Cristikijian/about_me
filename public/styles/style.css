@@ -248,12 +248,14 @@ table {
 .show-button,
 .hide-button {
   display: block;
+  position: absolute;
   margin-top: 40px;
   font-size: 20px;
   font-weight: 700;
   line-height: 26px;
   text-decoration: underline;
   cursor: pointer;
+  z-index: 10;
 }
 
 
